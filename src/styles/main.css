@@ -1,0 +1,417 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html {
+  /* Estilo del thumb (la parte que se mueve) */
+  /* Estilo del track (área donde se mueve el thumb) */
+  /* Estilo del botón de desplazamiento (opcional) */
+}
+html ::-webkit-scrollbar {
+  width: 12px; /* Ancho del scrollbar */
+}
+html ::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del thumb */
+  border-radius: 10px; /* Bordes redondeados */
+}
+html ::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color del track */
+  border-radius: 10px; /* Bordes redondeados */
+}
+html ::-webkit-scrollbar-button {
+  background-color: #ddd; /* Color del botón */
+}
+
+body {
+  background-color: whitesmoke;
+  color: #212529;
+  position: relative;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+header nav {
+  background-color: rgba(255, 255, 255, 0.7529411765);
+  backdrop-filter: blur(5px);
+  position: absolute;
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav img {
+  max-width: 40px;
+}
+header nav a {
+  text-decoration: none;
+  color: #212529;
+  margin: 0 1em;
+}
+
+main .container-hero {
+  background-color: #a8d4c7;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+main .container-hero .text {
+  padding: 1em;
+}
+main .container-hero h1 {
+  font-size: 48px;
+}
+main .container-hero h1 span {
+  color: #081c15;
+}
+main .container-hero h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+main .container-hero img {
+  width: 100%;
+  height: 100%;
+}
+main .container-hero .btns {
+  margin: 2em 0;
+  display: flex;
+  gap: 10px;
+}
+main .container-hero .btns button {
+  border: 0;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #212529;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+main .container-hero .btns button img {
+  max-width: 30px;
+}
+main .section1,
+main .section2,
+main .section3,
+main .section4,
+main .section5 {
+  padding: 1em;
+}
+main .section1 h2,
+main .section2 h2,
+main .section3 h2,
+main .section4 h2,
+main .section5 h2 {
+  margin: 1em 0;
+  font-size: 40px;
+}
+main .section1 p,
+main .section2 p,
+main .section3 p,
+main .section4 p,
+main .section5 p {
+  font-size: 18px;
+}
+main .section1 .card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 2em 0;
+}
+main .section1 .card-container .card {
+  flex: 30%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 5px 1px rgba(128, 128, 128, 0.158);
+  border-radius: 10px;
+  background-color: white;
+  text-align: center;
+}
+main .section1 .card-container .card p {
+  padding: 1em;
+}
+main .section1 .card-container .card img {
+  width: 100px;
+}
+main .section2 {
+  min-height: 55vh;
+  color: white;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.336);
+  text-align: center;
+  background-image: url(../assets/content/img1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  z-index: 1;
+}
+main .section2 h2 {
+  color: #005049;
+}
+main .section2::before {
+  position: absolute;
+  content: "";
+  background-color: rgba(33, 37, 41, 0.11);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+main .section3 {
+  background-color: #212529;
+  color: #adb5bd;
+}
+main .section3 .card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+main .section3 .card-container .r-card {
+  flex: 1;
+  background-color: rgb(26, 29, 32);
+  padding: 2em 1em;
+}
+main .section3 .card-container .r-card img {
+  max-width: 30px;
+  border-radius: 50%;
+}
+main .section3 .card-container .r-card hr {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  margin: 5px 0;
+}
+main .section3 .card-container .r-card .info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+main .section3 a {
+  display: inline-block;
+  background-color: transparent;
+  padding: 1em;
+  border: 1px solid #52b788;
+  color: #52b788;
+  text-decoration: none;
+  margin: 1em 0;
+}
+main .section3 a:hover {
+  background-color: #52b788;
+  color: #212529;
+  transition: 0.3s background;
+}
+main .section4 {
+  padding: 0;
+}
+main .section4 h2 {
+  padding: 0 0.5em;
+}
+main .section4 .container {
+  display: flex;
+  align-items: center;
+}
+main .section4 .container .img {
+  flex: 1;
+}
+main .section4 .container .text {
+  flex: 1;
+  padding: 2em;
+}
+main .section4 .container .text p {
+  font-size: 20px;
+}
+main .section5 {
+  background-color: white;
+}
+main .section5 .container {
+  display: flex;
+  gap: 5px;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+main .section5 .container .price-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: rgb(252, 252, 252);
+  box-shadow: 0 0 6px 1px rgba(8, 28, 21, 0.1019607843);
+  padding: 1em 2em;
+  border-bottom: 2px solid #52b788;
+}
+main .section5 .container .price-card .img {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+}
+main .section5 .container .price-card img {
+  width: 100%;
+}
+main .section5 .container .price-card ul {
+  list-style: none;
+}
+main .section5 .container .price-card ul li::before {
+  content: "- ";
+}
+main .section5 .container .price-card button {
+  padding: 1em;
+  width: 100%;
+  margin: 1em auto;
+  display: block;
+  border: none;
+  background-color: #52b788;
+  color: whitesmoke;
+  font-size: 18px;
+}
+main .section5 .container .price-card h3 {
+  text-align: center;
+  margin: 8px 0;
+}
+
+footer {
+  text-align: center;
+  bottom: 0;
+  padding: 1em;
+  width: 100%;
+  background-color: #081c15;
+  color: #adb5bd;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+footer img {
+  max-width: 50px;
+}
+footer li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  header nav {
+    position: relative;
+  }
+  main .container-hero {
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.603);
+    background-image: url(../assets/content/zimg1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    position: relative;
+  }
+  main .container-hero img {
+    display: none;
+  }
+  main .container-hero .btns {
+    justify-content: center;
+  }
+  main .container-hero .btns img {
+    display: block;
+  }
+  main .container-hero h1 {
+    font-size: 40px;
+  }
+  main .container-hero h1 span {
+    color: #081c15;
+  }
+  main .section1,
+  main .section2,
+  main .section3,
+  main .section4,
+  main .section5 {
+    padding: 1em;
+  }
+  main .section1 h2,
+  main .section2 h2,
+  main .section3 h2,
+  main .section4 h2,
+  main .section5 h2 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 38px;
+  }
+  main .section1 p,
+  main .section2 p,
+  main .section3 p,
+  main .section4 p,
+  main .section5 p {
+    font-size: 15px;
+  }
+  main .section1 .card-container {
+    flex-direction: column;
+  }
+  main .section1 .card-container img {
+    padding: 1em;
+  }
+  main .section3 .card-container {
+    flex-direction: column;
+  }
+  main .section4 .container {
+    flex-direction: column;
+  }
+  main .section5 .container {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+  main .section1,
+  .section2,
+  .section3,
+  .section4,
+  .section5 {
+    padding: 1em;
+  }
+  main .section1 h2,
+  .section2 h2,
+  .section3 h2,
+  .section4 h2,
+  .section5 h2 {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 40px;
+  }
+  main .section1 p,
+  .section2 p,
+  .section3 p,
+  .section4 p,
+  .section5 p {
+    font-size: 18px;
+  }
+  main .section1 .card-container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  main .section1 .card-container .card {
+    flex: 40%;
+  }
+  main .section1 .card-container img {
+    padding: 1em;
+  }
+  main .section2 {
+    min-height: auto;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
